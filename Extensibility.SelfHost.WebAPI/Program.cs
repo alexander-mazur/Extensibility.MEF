@@ -1,4 +1,5 @@
-﻿using Microsoft.Owin.Hosting;
+﻿using Extensibility.SelfHost.WebAPI.Composition;
+using Microsoft.Owin.Hosting;
 
 using System;
 
@@ -10,8 +11,18 @@ namespace Extensibility.SelfHost.WebAPI
         {
             using (WebApp.Start<Startup>("http://localhost:9000/"))
             {
-                Console.WriteLine("Press ENTER for exit...");
-                Console.ReadLine();
+                using (var applicationAdapterLoader = ApplicationAdapterLoader.Instance)
+                {
+                    applicationAdapterLoader.ComposeParts();
+
+                    foreach (var applicationAdapter in applicationAdapterLoader.ApplicationAdapters)
+                    {
+                        applicationAdapter.Initialize();
+                    }
+
+                    Console.WriteLine("Press ENTER for exit...");
+                    Console.ReadLine();
+                }
             }
         }
     }

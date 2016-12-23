@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Extensibility.MEF
+namespace Extensibility.WPF
 {
     /// <summary>
     /// Interaction logic for App.xaml

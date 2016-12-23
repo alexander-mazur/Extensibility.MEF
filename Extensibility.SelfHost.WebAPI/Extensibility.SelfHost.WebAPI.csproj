@@ -53,6 +53,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
@@ -74,7 +75,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Composition\ApplicationAdapterLoader.cs" />
     <Compile Include="Controllers\AdaptersController.cs" />
+    <Compile Include="Composition\IApplicationAdapterLoader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -88,6 +91,20 @@
       <Project>{33bc1d10-dafc-4ffe-9a71-3c2e3c297e9a}</Project>
       <Name>Extensibility.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Extensibility.ApplicationAdapters\ApplicationAdapter1\bin\Debug\ApplicationAdapter1.dll">
+      <Link>Adapters\ApplicationAdapter1.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Extensibility.ApplicationAdapters\ApplicationAdapter2\bin\Debug\ApplicationAdapter2.dll">
+      <Link>Adapters\ApplicationAdapter2.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Extensibility.ApplicationAdapters\ApplicationAdapter3\bin\Debug\ApplicationAdapter3.dll">
+      <Link>Adapters\ApplicationAdapter3.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

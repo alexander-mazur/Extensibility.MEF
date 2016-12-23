@@ -1,5 +1,5 @@
-﻿using Owin;
-
+﻿using Extensibility.SelfHost.WebAPI.Composition;
+using Owin;
 using System.Web.Http;
 
 namespace Extensibility.SelfHost.WebAPI

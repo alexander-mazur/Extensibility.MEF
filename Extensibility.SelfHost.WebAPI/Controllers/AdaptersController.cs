@@ -1,17 +1,30 @@
-﻿using System.Collections.Generic;
-using System.Net;
-using System.Net.Http;
+﻿using Extensibility.SelfHost.WebAPI.Composition;
+using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Web.Http;
-
-using Extensibility.Common;
 
 namespace Extensibility.SelfHost.WebAPI.Controllers
 {
     public class AdaptersController : ApiController
     {
-        public IEnumerable<IApplicationAdapter> Get()
+        private IApplicationAdapterLoader _applicationAdapterLoader;
+
+        public AdaptersController()
         {
-            throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.NotImplemented));
+            _applicationAdapterLoader = ApplicationAdapterLoader.Instance;
+        }
+
+        [HttpGet]
+        public IEnumerable<string> GetAdapterNames()
+        {
+            var result = new List<string>();
+
+            foreach (var applicationAdapter in _applicationAdapterLoader.ApplicationAdapters)
+            {
+                result.Add(applicationAdapter.Name);
+            }
+
+            return result;
         }
     }
 }
