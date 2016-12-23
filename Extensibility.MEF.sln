@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.25928.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensibility.MEF", "Extensibility.MEF\Extensibility.MEF.csproj", "{F6231265-1B81-4CEF-ABA1-B7993AA9C855}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensibility.WPF", "Extensibility.WPF\Extensibility.WPF.csproj", "{F6231265-1B81-4CEF-ABA1-B7993AA9C855}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensibility.SelfHost.WebAPI", "Extensibility.SelfHost.WebAPI\Extensibility.SelfHost.WebAPI.csproj", "{5DBA2B11-BB6C-40D6-912E-3AA5C6BE8356}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensibility.Common", "Extensibility.Common\Extensibility.Common.csproj", "{8E6ABC0E-AC9C-4E6A-9585-9273E24A6033}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensibility.ApplicationAdapters", "Extensibility.ApplicationAdapters", "{47132CD0-EB1E-47C6-9CB8-FA4D9C349658}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationAdapter1", "Extensibility.ApplicationAdapters\ApplicationAdapter1\ApplicationAdapter1.csproj", "{F1338542-FA90-4D98-AC5D-8ADBEC5CDFDB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationAdapter2", "Extensibility.ApplicationAdapters\ApplicationAdapter2\ApplicationAdapter2.csproj", "{AA1EB879-4808-4FC4-84FA-62638047D7E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationAdapter3", "Extensibility.ApplicationAdapters\ApplicationAdapter3\ApplicationAdapter3.csproj", "{F5A2681E-56A0-4B3A-99D9-585D549BB7A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +27,33 @@ Global
 		{F6231265-1B81-4CEF-ABA1-B7993AA9C855}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6231265-1B81-4CEF-ABA1-B7993AA9C855}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6231265-1B81-4CEF-ABA1-B7993AA9C855}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DBA2B11-BB6C-40D6-912E-3AA5C6BE8356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DBA2B11-BB6C-40D6-912E-3AA5C6BE8356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DBA2B11-BB6C-40D6-912E-3AA5C6BE8356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DBA2B11-BB6C-40D6-912E-3AA5C6BE8356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E6ABC0E-AC9C-4E6A-9585-9273E24A6033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E6ABC0E-AC9C-4E6A-9585-9273E24A6033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E6ABC0E-AC9C-4E6A-9585-9273E24A6033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E6ABC0E-AC9C-4E6A-9585-9273E24A6033}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1338542-FA90-4D98-AC5D-8ADBEC5CDFDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1338542-FA90-4D98-AC5D-8ADBEC5CDFDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1338542-FA90-4D98-AC5D-8ADBEC5CDFDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1338542-FA90-4D98-AC5D-8ADBEC5CDFDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA1EB879-4808-4FC4-84FA-62638047D7E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA1EB879-4808-4FC4-84FA-62638047D7E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA1EB879-4808-4FC4-84FA-62638047D7E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA1EB879-4808-4FC4-84FA-62638047D7E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5A2681E-56A0-4B3A-99D9-585D549BB7A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5A2681E-56A0-4B3A-99D9-585D549BB7A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5A2681E-56A0-4B3A-99D9-585D549BB7A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5A2681E-56A0-4B3A-99D9-585D549BB7A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F1338542-FA90-4D98-AC5D-8ADBEC5CDFDB} = {47132CD0-EB1E-47C6-9CB8-FA4D9C349658}
+		{AA1EB879-4808-4FC4-84FA-62638047D7E6} = {47132CD0-EB1E-47C6-9CB8-FA4D9C349658}
+		{F5A2681E-56A0-4B3A-99D9-585D549BB7A6} = {47132CD0-EB1E-47C6-9CB8-FA4D9C349658}
 	EndGlobalSection
 EndGlobal
