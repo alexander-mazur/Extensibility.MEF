@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Owin.Hosting;
+
+using System;
 
 namespace Extensibility.SelfHost.WebAPI
 {
@@ -10,8 +8,11 @@ namespace Extensibility.SelfHost.WebAPI
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Press ENTER for exit...");
-            Console.ReadLine();
+            using (WebApp.Start<Startup>("http://localhost:9000/"))
+            {
+                Console.WriteLine("Press ENTER for exit...");
+                Console.ReadLine();
+            }
         }
     }
 }
