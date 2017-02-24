@@ -38,7 +38,10 @@ namespace Extensibility.WPF.Commands
 
         public void RaiseCanExecuteChanged()
         {
-            CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+            if (CanExecuteChanged != null)
+            {
+                CanExecuteChanged.Invoke(this, EventArgs.Empty);
+            }
         }
     }
 }
